@@ -19,9 +19,6 @@
 ----------------------------------------------------------
  */
 
-:root {
-    --variavel: #AAA;
-}
 
 
 /* 
@@ -47,7 +44,7 @@
 
 body {
     background-color: black;
-    font-family: sans-serif;
+    font-family: 'sans-serif', Arial;
 }
 
 h1 {
@@ -55,20 +52,26 @@ h1 {
     text-align: center;
     color: white;
     font-size: 50px;
+    text-shadow: 0 0 30px rgb(25, 252, 4);
 }
 
 .container {
     border: 5px solid white;
     padding: 15px;
-    margin: 50px auto;
+    margin: 80px auto;
     box-shadow: 0 0 40px rgb(25, 252, 4);
     height: 70%;
     width: 70%;
 }
 
 .entradas {
-    background-color: #fff;
-    padding: 50px;
+    background-image: url(/assets/img/balanca.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: white;
+    padding: 30px;
+    width: 100%;
+    align-items: center;
 }
 
 .entradas p {
@@ -76,20 +79,22 @@ h1 {
 }
 
 .container-calculadora-peso, .container-calculadora-altura {
-    margin-bottom: 16px;
-    width: 100%;
+    margin: 16px 30px;
+    width: 30%;
     color: black;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
 }
 
-.peso-slider, .altura-slider {
-    width: 100%;
-    height: 1px;
-    outline: none;
+.medidas {
+    font-size: 25px;
+    margin-left: 10px;
 }
 
 .input-number {
     height: 40px;
-    width: 90px;
+    width: 100px;
     margin-top: 15px;
     margin-bottom: 50px;
     padding: 15px;
@@ -110,6 +115,15 @@ h1 {
     color: rgb(25, 252, 4);
     transition: 0.8s;
 }
+
+#resultadoIMC {
+    color: white;
+    background-color: black;
+    text-align: center;
+    font-size: 30px;
+    padding: 0 auto 30px auto;
+}
+
 
 
 /* 
@@ -151,6 +165,65 @@ h1 {
 */
 
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 850px) {
+
+    .container-calculadora-peso, .container-calculadora-altura {
+        margin: 5px 5px;
+        width: 100%;
+        color: black;
+        display: block;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #resultadoIMC {
+        padding: 0 10px;
+        margin-bottom: 30px;
+    }
+
+}
+
+
+@media screen and (max-width: 360px) {
+
+h1 {
+    font-size: 25px;
+}
+
+.entradas p{
+    font-size: 20px;
+}
+
+.medidas {
+    font-size: 15px;
+    margin: 3px;
+}
+
+.input-number {
+    height: 30px;
+    width: 80px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    padding: 15px;
+    font-size: 15px;
+}
+
+.container .botao-calcular {
+    font-size: 18px;
+}
+
+#resultadoIMC {
+    font-size: 20px;
+}
+
+}
+
+
+@media screen and (max-width: 280px) {
+
+    .container .botao-calcular {
+        font-size: 13px;
+    }
 
 }

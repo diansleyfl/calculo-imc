@@ -19,19 +19,19 @@
         <form class="entradas">
             <div class="container-calculadora-peso">
                 <p>Digite seu peso</p>
-                <input type="range" class="peso-slider"/>
-                <p>Peso</p>
-                <input type="number" class="input-number"/>
+                <input id="peso" type="number" class="input-number"/>
+                <span class="medidas">Kg</span>
             </div>
             <div class="container-calculadora-altura">
                 <p>Digite sua altura</p>
-                <input type="range" class="altura-slider"/>
-                <p>Altura</p>
-                <input type="number" class="input-number"/>
+                <input id="altura" type="number" class="input-number"/>
+                <span class="medidas">cm</span>
             </div>
-            <input class="botao-calcular" type="button" value="CALCULAR"/>
+            <input id="btnCalcular" class="botao-calcular" type="button" value="CALCULAR"/>
         </form>
     </div>
+    <div id="resultadoIMC"></div>
+    <div id="diagnostico"></div>
 
 </body>
 
